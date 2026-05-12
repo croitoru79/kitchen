@@ -27,4 +27,57 @@ async function sumbitForm(data: FormData) {
   }
 }
 
-export { sumbitForm };
+type CalculatorFormData = {
+  shape: string;
+  material: string;
+  countertop: string;
+  length: string;
+  width: string;
+  drawers: string;
+  hasAppliances: boolean;
+  style: string;
+  budget: string;
+  details: string;
+};
+
+async function submitCalculatorForm(data: CalculatorFormData) {
+  if (!data.length || !data.width || !data.drawers) {
+    return;
+  }
+
+  const botToken = process.env.BOT_TOKEN;
+  const chatId = process.env.CHAT_ID;
+
+  const message = [
+    "Calculator de preturi - cerere noua",
+    `Forma bucatariei: ${data.shape}`,
+    `Material: ${data.material}`,
+    `Blat: ${data.countertop}`,
+    `Lungime: ${data.length} m`,
+    `Latime: ${data.width} m`,
+    `Numar de sertare: ${data.drawers}`,
+    `Tehnica incorporata: ${data.hasAppliances ? "Da" : "Nu"}`,
+    `Stil: ${data.style}`,
+    `Buget: ${data.budget}`,
+    `Detalii suplimentare: ${data.details || "Nu sunt completate"}`,
+  ].join("\n");
+
+  const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+  try {
+    await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: message,
+      }),
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export { sumbitForm, submitCalculatorForm };

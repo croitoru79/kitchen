@@ -1,0 +1,603 @@
+@import "../styles/_variables.scss";
+
+.introActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.open {
+    border-radius: 100px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    min-height: 44px;
+    box-sizing: border-box;
+    color: $white;
+    @include Montserrat-Semibold;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgba($black, 90%);
+    cursor: pointer;
+    transition: background-color .2s ease, transform .2s ease;
+}
+
+.openIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gold;
+}
+
+.open:hover {
+    background-color: rgba($black, 100%);
+    transform: translateY(-1px);
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(#000, 65%);
+    backdrop-filter: blur(8px);
+}
+
+.modal {
+    position: relative;
+    z-index: 1;
+    width: min(1120px, 100%);
+    max-height: calc(100vh - 48px);
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    overflow: hidden;
+    border-radius: 8px;
+    background: $white;
+    box-shadow: 0px 24px 80px rgba(#000, 35%);
+}
+
+.side {
+    position: relative;
+    min-height: 640px;
+    overflow: hidden;
+    background-color: $black;
+}
+
+.sideImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sideOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(#000, 0%) 35%, rgba(#000, 72%) 78%, rgba(#000, 95%) 100%);
+}
+
+.sideContent {
+    position: absolute;
+    inset: auto 20px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    color: $white;
+}
+
+.logo {
+    width: 190px;
+    height: auto;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.choice span {
+    @include Montserrat-Regular;
+    font-size: 14px;
+    color: rgba($white, 80%);
+}
+
+.choice strong {
+    @include Montserrat-Semibold;
+    font-size: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    max-height: calc(100vh - 48px);
+    background-color: $white;
+}
+
+.header {
+    min-height: 92px;
+    padding: 22px 28px 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    color: $white;
+    background-color: $black;
+}
+
+.header h2 {
+    @include Montserrat-Semibold;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.step {
+    @include Montserrat-Regular;
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: rgba($white, 70%);
+}
+
+.close {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.progress {
+    height: 4px;
+    background-color: rgba($gold, 20%);
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background-color: $gold;
+    transition: width .25s ease;
+}
+
+.body {
+    flex: 1;
+    overflow: auto;
+    padding: 24px 28px 20px;
+}
+
+.body h3 {
+    @include Montserrat-Semibold;
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 18px;
+}
+
+.footer {
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    border-top: 1px solid #eeeeee;
+    background-color: rgba(#fafafa, 95%);
+}
+
+.back,
+.next {
+    min-width: 92px;
+    height: 44px;
+    padding: 0 22px;
+    border-radius: 100px;
+    @include Montserrat-Medium;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.back {
+    color: $black;
+    border: 1px solid #eeeeee;
+    background: $white;
+}
+
+.back:disabled {
+    opacity: .4;
+    cursor: default;
+}
+
+.next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: $white;
+    border: 0;
+    background: $gold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    min-height: 188px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: $black;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    background: $white;
+    cursor: pointer;
+    transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.card.selected {
+    border-color: $black;
+    box-shadow: 0px 10px 30px rgba(#000, 8%);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: rgba($black, 40%);
+}
+
+.cardRadio {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    border-radius: 50%;
+    border: 1px solid #eeeeee;
+    background: $white;
+    box-shadow: 0px 3px 10px rgba(#000, 14%);
+}
+
+.card.selected .cardRadio {
+    border-color: $black;
+    background: $black;
+}
+
+.cardMedia {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+.cardMedia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.planBadge {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 93px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 6px;
+    background: $white;
+    box-shadow: 0px 8px 24px rgba(#000, 24%);
+    overflow: hidden;
+}
+
+.planBadgeCompact {
+    width: 53px;
+    height: 44px;
+}
+
+.planBadgeWideTall {
+    width: 61px;
+    height: 44px;
+}
+
+.planBadgeIsland {
+    width: 75px;
+    height: 40px;
+}
+
+.planBadgeBar {
+    width: 73px;
+    height: 40px;
+}
+
+.planBadge img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cardLabel {
+    min-height: 56px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    @include Montserrat-Semibold;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.helpPlan {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #8e8e8e;
+    background-color: #f8f8f8;
+}
+
+.helpPlanShape {
+    width: 96px;
+    height: 58px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3px;
+    transform: perspective(140px) rotateX(20deg);
+}
+
+.helpPlanShape span {
+    border: 2px solid #a9a9a9;
+    background: $white;
+}
+
+.helpPlanShape span:first-child {
+    grid-row: span 2;
+}
+
+.helpPlanShape span:last-child {
+    grid-column: span 2;
+}
+
+.helpPlanMark {
+    width: 42px;
+    height: 42px;
+    margin-top: -46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #bdbdbd;
+    background: $white;
+    @include Montserrat-Semibold;
+    font-size: 26px;
+}
+
+.helpPlanChairs {
+    display: flex;
+    gap: 10px;
+}
+
+.helpPlanChairs span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #a9a9a9;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fields h3 {
+    margin-bottom: 0;
+}
+
+.fields label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include Montserrat-Medium;
+    font-size: 15px;
+    color: $black;
+}
+
+.fields input,
+.fields select,
+.fields textarea {
+    width: 100%;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    background-color: #fafafa;
+    color: $black;
+    @include Montserrat-Regular;
+    font-size: 15px;
+    outline: none;
+    transition: border-color .2s ease, background-color .2s ease;
+}
+
+.fields input:focus,
+.fields select:focus,
+.fields textarea:focus {
+    border-color: rgba($gold, 80%);
+    background-color: $white;
+}
+
+.fields input,
+.fields select {
+    height: 46px;
+    padding: 0 16px;
+}
+
+.fields textarea {
+    min-height: 126px;
+    padding: 14px 16px;
+    resize: vertical;
+}
+
+.fieldsRow {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.fieldsRowTwo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fieldsCheckbox {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @include Montserrat-Medium;
+    font-size: 15px;
+}
+
+.fieldsCheckbox label {
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.fieldsCheckbox input {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    accent-color: $gold;
+}
+
+@media screen and (max-width: 1200px) {
+    .modal {
+        grid-template-columns: 240px 1fr;
+    }
+
+    .side {
+        min-height: 590px;
+    }
+
+    .grid {
+        gap: 12px;
+    }
+
+    .card {
+        min-height: 166px;
+    }
+
+    .cardMedia {
+        height: 110px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .introActions {
+        gap: 12px;
+        padding: 0 16px;
+    }
+
+    .introActions :global(.preview-form),
+    .open {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .popup {
+        padding: 12px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    .modal {
+        max-height: none;
+        grid-template-columns: 1fr;
+    }
+
+    .side {
+        min-height: 220px;
+    }
+
+    .sideContent {
+        inset: auto 16px 18px;
+        gap: 18px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .content {
+        max-height: none;
+    }
+
+    .header {
+        min-height: 84px;
+        padding: 18px 16px 14px;
+    }
+
+    .header h2 {
+        font-size: 22px;
+    }
+
+    .body {
+        padding: 18px 16px;
+    }
+
+    .body h3 {
+        font-size: 18px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 172px;
+    }
+
+    .cardMedia {
+        height: 116px;
+    }
+
+    .fieldsRow,
+    .fieldsRowTwo {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        position: sticky;
+        bottom: 0;
+        padding: 14px 16px;
+    }
+}
