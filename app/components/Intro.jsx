@@ -2,7 +2,6 @@ import logo from "@images/Croitoru_Logo.svg";
 import cover from "@images/Img-225.jpg";
 import Image from "next/image";
 import Form from "./Form";
-import KitchenCalculator from "./KitchenCalculator";
 import calculatorStyles from "./KitchenCalculator.module.scss";
 
 export default function Intro() {
@@ -24,7 +23,6 @@ export default function Intro() {
               />
             </svg>
           </Form>
-          <KitchenCalculator />
         </div>
       </div>
     </section>

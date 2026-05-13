@@ -230,7 +230,6 @@ export default function KitchenCalculator() {
   };
 
   const goBack = () => {
-    pushCalculatorEvent(`calculator_step_${step}_back`);
     setStep((current) => Math.max(1, current - 1));
   };
 
@@ -248,7 +247,7 @@ export default function KitchenCalculator() {
     pushCalculatorEvent("calculator_finish");
     await submitCalculatorForm(form);
     setIsOpen(false);
-    router.push("/thank-you-calc");
+    router.push("/thank_you_calc");
   };
 
   return (
