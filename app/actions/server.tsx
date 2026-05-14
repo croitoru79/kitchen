@@ -36,12 +36,12 @@ type CalculatorFormData = {
   drawers: string;
   hasAppliances: boolean;
   style: string;
-  budget: string;
+  phone: string;
   details: string;
 };
 
 async function submitCalculatorForm(data: CalculatorFormData) {
-  if (!data.length || !data.width || !data.drawers) {
+  if (!data.length || !data.width || !data.drawers || !data.phone) {
     return;
   }
 
@@ -56,9 +56,9 @@ async function submitCalculatorForm(data: CalculatorFormData) {
     `Lungime: ${data.length} m`,
     `Latime: ${data.width} m`,
     `Numar de sertare: ${data.drawers}`,
-    `Tehnica incorporata: ${data.hasAppliances ? "Da" : "Nu"}`,
     `Stil: ${data.style}`,
-    `Buget: ${data.budget}`,
+    `Tehnica incorporata: ${data.hasAppliances ? "Da" : "Nu"}`,
+    `Numar de telefon: ${data.phone}`,
     `Detalii suplimentare: ${data.details || "Nu sunt completate"}`,
   ].join("\n");
 

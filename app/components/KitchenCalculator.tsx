@@ -45,7 +45,7 @@ type CalculatorState = {
   drawers: string;
   hasAppliances: boolean;
   style: string;
-  budget: string;
+  phone: string;
   details: string;
 };
 
@@ -87,7 +87,7 @@ const initialState: CalculatorState = {
   drawers: "",
   hasAppliances: false,
   style: "Modern",
-  budget: "pana la 50.000",
+  phone: "",
   details: "",
 };
 
@@ -161,7 +161,7 @@ export default function KitchenCalculator() {
         ? form.material
         : step === 3
           ? form.countertop
-          : [form.length && `${form.length}m`, form.width && `${form.width}m`, form.style, form.budget].filter(Boolean).join(" / ");
+          : [form.length && `${form.length}m`, form.width && `${form.width}m`, form.style, form.phone].filter(Boolean).join(" / ");
   const selectedShapeImage = shapeOptions.find((choice) => choice.label === form.shape)?.image;
   const selectedMaterialImage = materialOptions.find((choice) => choice.label === form.material)?.image;
   const selectedCountertopImage = countertopOptions.find((choice) => choice.label === form.countertop)?.image;
@@ -205,7 +205,7 @@ export default function KitchenCalculator() {
       calculator_drawers: form.drawers,
       calculator_has_appliances: form.hasAppliances,
       calculator_style: form.style,
-      calculator_budget: form.budget,
+      calculator_phone: form.phone,
       ...extra,
     });
   };
@@ -239,7 +239,7 @@ export default function KitchenCalculator() {
   };
 
   const finish = async () => {
-    if (!form.length.trim() || !form.width.trim() || !form.drawers.trim()) {
+    if (!form.length.trim() || !form.width.trim() || !form.drawers.trim() || !form.phone.trim()) {
       pushCalculatorEvent("calculator_finish_validation_error");
       return;
     }
@@ -382,17 +382,6 @@ export default function KitchenCalculator() {
                         />
                       </label>
                     </div>
-                    <div className={styles.fieldsCheckbox}>
-                      <span>Tehnica Incorporata</span>
-                      <label>
-                        <input
-                          type="checkbox"
-                          checked={form.hasAppliances}
-                          onChange={(event) => updateField("hasAppliances", event.target.checked)}
-                        />
-                        Include
-                      </label>
-                    </div>
                     <div className={`${styles.fieldsRow} ${styles.fieldsRowTwo}`}>
                       <label>
                         Stil
@@ -403,16 +392,29 @@ export default function KitchenCalculator() {
                           <option>Scandinav</option>
                         </select>
                       </label>
-                      <label>
-                        Buget
-                        <select value={form.budget} onChange={(event) => updateField("budget", event.target.value)}>
-                          <option>pana la 50.000</option>
-                          <option>50.000 - 80.000</option>
-                          <option>80.000 - 120.000</option>
-                          <option>peste 120.000</option>
-                        </select>
-                      </label>
+                      <div className={styles.fieldsCheckbox}>
+                        <span>Tehnica Incorporata</span>
+                        <label>
+                          <input
+                            type="checkbox"
+                            checked={form.hasAppliances}
+                            onChange={(event) => updateField("hasAppliances", event.target.checked)}
+                          />
+                          Include
+                        </label>
+                      </div>
                     </div>
+                    <h3>Informatii aditionale</h3>
+                    <label>
+                      Numar de telefon
+                      <input
+                        required
+                        type="tel"
+                        value={form.phone}
+                        onChange={(event) => updateField("phone", event.target.value)}
+                        placeholder="ex. 060000000"
+                      />
+                    </label>
                     <label className={styles.fieldsDetails}>
                       Detalii suplimentare
                       <textarea
