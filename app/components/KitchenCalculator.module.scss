@@ -13,15 +13,17 @@
     border: none;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 10px 16px;
-    min-height: 44px;
+    width: 242px;
+    height: 42px;
+    padding: 0 16px;
     box-sizing: border-box;
     color: $white;
     @include Montserrat-Semibold;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    background-color: rgba($black, 90%);
+    background-color: #A67C00;
     cursor: pointer;
     transition: background-color .2s ease, transform .2s ease;
 }
@@ -30,11 +32,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $gold;
+    color: $white;
 }
 
 .open:hover {
-    background-color: rgba($black, 100%);
+    background-color: #8f6a00;
     transform: translateY(-1px);
 }
 
@@ -82,6 +84,10 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.sideImageContain {
+    object-fit: contain;
 }
 
 .sideOverlay {
@@ -581,20 +587,37 @@
     }
 
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
 
     .card {
-        min-height: 172px;
+        min-height: 154px;
     }
 
     .cardMedia {
-        height: 116px;
+        height: 96px;
+    }
+
+    .cardLabel {
+        min-height: 48px;
+        padding: 12px;
+        font-size: 13px;
     }
 
     .fieldsRow,
     .fieldsRowTwo {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .fieldsCheckbox {
+        grid-column: span 1;
+    }
+
+    .fields > label,
+    .fieldsDetails {
+        width: 100%;
     }
 
     .footer {

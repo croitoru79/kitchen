@@ -41,7 +41,7 @@ type CalculatorFormData = {
 };
 
 async function submitCalculatorForm(data: CalculatorFormData) {
-  if (!data.length || !data.width || !data.drawers || !data.phone) {
+  if (!data.phone) {
     return;
   }
 
