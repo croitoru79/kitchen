@@ -10,6 +10,10 @@ import Script from "next/script";
 import { GoogleTagManager } from '@next/third-parties/google';
 import { Analytics } from "@vercel/analytics/react";
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.bucatariicroitoru.md"),
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
