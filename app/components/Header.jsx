@@ -3,6 +3,7 @@ import logo from "@images/Croitoru_Logo.svg";
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
+import KitchenCalculator from "./KitchenCalculator";
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -33,6 +34,7 @@ export default function Header() {
 
         </div>
         <div className="header__inner-info">
+          <KitchenCalculator buttonClassName="header__calc" compact label="CALCULATOR" />
           <Link className="header__inner-link" href="tel:37361039797">
             +373 61 03 97 97
           </Link>

@@ -3,6 +3,7 @@
 import Image, { type StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import logo from "@images/Croitoru_Logo.svg";
 import sidebarImage from "@images/calculator/sidebar.png";
 import step1TipDrept from "@images/calculator/step1-tip-drept.png";
@@ -52,6 +53,12 @@ type CalculatorState = {
 
 type DataLayerWindow = Window & {
   dataLayer?: Record<string, unknown>[];
+};
+
+type KitchenCalculatorProps = {
+  buttonClassName?: string;
+  compact?: boolean;
+  label?: string;
 };
 
 const shapeOptions: Choice[] = [
@@ -150,7 +157,11 @@ function ChoiceCard({
   );
 }
 
-export default function KitchenCalculator() {
+export default function KitchenCalculator({
+  buttonClassName,
+  compact = false,
+  label = "CALCULATOR DE PREȚURI",
+}: KitchenCalculatorProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(1);
   const [form, setForm] = useState<CalculatorState>(initialState);
@@ -180,6 +191,7 @@ export default function KitchenCalculator() {
     (step === 1 && selectedShapeContain) ||
     (step === 3 && selectedCountertopContain) ||
     (step === 4 && selectedCountertopContain);
+  const isPhoneEmpty = !form.phone.trim();
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -224,6 +236,10 @@ export default function KitchenCalculator() {
     }));
   };
 
+  const updatePhone = (value: string) => {
+    updateField("phone", value.replace(/\D/g, "").slice(0, 9));
+  };
+
   const selectOption = (field: "shape" | "material" | "countertop", value: string) => {
     const trackingField =
       field === "shape" ? "calculator_shape" : field === "material" ? "calculator_material" : "calculator_countertop";
@@ -260,7 +276,7 @@ export default function KitchenCalculator() {
   return (
     <>
       <button
-        className={styles.open}
+        className={[styles.open, compact ? styles.openCompact : "", buttonClassName].filter(Boolean).join(" ")}
         type="button"
         onClick={() => {
           pushCalculatorEvent("calculator_open", { calculator_step: 1 });
@@ -280,10 +296,10 @@ export default function KitchenCalculator() {
             />
           </svg>
         </span>
-        CALCULATOR DE PREȚURI
+        {label}
       </button>
 
-      {isOpen && (
+      {isOpen && createPortal(
         <div className={styles.popup} role="dialog" aria-modal="true" aria-labelledby="calculator-title">
           <div className={styles.backdrop} onClick={close} />
           <div className={styles.modal}>
@@ -423,13 +439,16 @@ export default function KitchenCalculator() {
                     </div>
                     <h3>Informații adiționale</h3>
                     <label>
-                      Număr de telefon
+                      <span className={styles.requiredLabel}>
+                        Număr de telefon <span className={styles.required}>*</span>
+                      </span>
                       <input
                         required
                         type="tel"
                         value={form.phone}
-                        onChange={(event) => updateField("phone", event.target.value)}
-                        placeholder="ex. 060000000"
+                        onChange={(event) => updatePhone(event.target.value)}
+                        placeholder="ex. 060896509"
+                        maxLength={9}
                       />
                     </label>
                     <label className={styles.fieldsDetails}>
@@ -463,14 +482,15 @@ export default function KitchenCalculator() {
                     </svg>
                   </button>
                 ) : (
-                  <button className={styles.next} type="button" onClick={finish}>
+                  <button className={styles.next} type="button" onClick={finish} disabled={isPhoneEmpty}>
                     Finisează
                   </button>
                 )}
               </footer>
             </section>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

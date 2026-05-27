@@ -5,16 +5,18 @@ import { getKitchensData } from "@//actions/get_kitchens";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Croitoru | Bucătării",
-  description: "Croitoru - Bucătării la comandă cu design italian",
+  title: "Bucătării Croitoru | Bucătării",
+  description: "Bucătării Croitoru - Bucătării la comandă cu design italian",
   keywords: "bucătării, mobilă, design, italian, comandă, croitoru",
   openGraph: {
+    title: "Bucătării Croitoru | Bucătării",
+    description: "Bucătării Croitoru - Bucătării la comandă cu design italian",
     images: [
       {
         url: "/images/og-image.png",
         width: 800,
         height: 600,
-        alt: "Croitoru",
+        alt: "Bucătării Croitoru",
       },
     ],
   },

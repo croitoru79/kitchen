@@ -9,16 +9,18 @@ import Recomended from "@//components/Recomended";
 
 
 export const metadata: Metadata = {
-  title: "Croitoru | Franke",
-  description: "Croitoru - Bucătării la comandă cu design italian",
+  title: "Bucătării Croitoru | Franke",
+  description: "Bucătării Croitoru - Bucătării la comandă cu design italian",
   keywords: "bucătării, mobilă, design, italian, comandă, croitoru",
   openGraph: {
+    title: "Bucătării Croitoru | Franke",
+    description: "Bucătării Croitoru - Bucătării la comandă cu design italian",
     images: [
       {
         url: "/images/og-image.png",
         width: 800,
         height: 600,
-        alt: "Croitoru",
+        alt: "Bucătării Croitoru",
       },
     ],
   },

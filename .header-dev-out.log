@@ -1,0 +1,14 @@
+
+> kitchen@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.14
+  - Local:        http://localhost:3003
+
+ ✓ Starting...
+ ✓ Ready in 1556ms
+[?25h
+mpiling / ...
+ ✓ Compiled / in 2.1s (866 modules)
+ GET / 200 in 2867ms
+[?25h

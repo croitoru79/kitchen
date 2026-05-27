@@ -128,6 +128,7 @@ p {
 
 .burger {
     display: none;
+    cursor: pointer;
 }
 
 .menu {
@@ -190,6 +191,9 @@ p {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+        }
+        &-calc {
+            flex-shrink: 0;
         }
         &-link {
             font-size: 14px;

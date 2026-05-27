@@ -1,0 +1,219 @@
+ ⚠ Port 3000 is in use, trying 3001 instead.
+ ⚠ Port 3001 is in use, trying 3002 instead.
+ ⚠ Port 3002 is in use, trying 3003 instead.
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'C:\DumpStack.log.tmp'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'C:\hiberfil.sys'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'C:\swapfile.sys'
+Watchpack Error (initial scan): Error: EINVAL: invalid argument, lstat 'C:\pagefile.sys'
+Warning: Invalid DOM property `srcset`. Did you mean `srcSet`?
+    at img
+    at eval (webpack-internal:///(ssr)/./node_modules/next/dist/client/image-component.js:133:11)
+    at eval (webpack-internal:///(ssr)/./node_modules/next/dist/client/image-component.js:242:47)
+    at a
+    at LinkComponent (webpack-internal:///(ssr)/./node_modules/next/dist/client/link.js:118:19)
+    at div
+    at header
+    at Header (webpack-internal:///(ssr)/./app/components/Header.jsx:20:76)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at ServerInsertedHTMLProvider (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:24328)
+Warning: Invalid DOM property `stroke-width`. Did you mean `strokeWidth`?
+    at path
+    at svg
+    at a
+    at div
+    at div
+    at div
+    at header
+    at Header (webpack-internal:///(ssr)/./app/components/Header.jsx:20:76)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at ServerInsertedHTMLProvider (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:24328)
+Warning: Invalid DOM property `stroke-linecap`. Did you mean `strokeLinecap`?
+    at path
+    at svg
+    at div
+    at div
+    at div
+    at header
+    at Header (webpack-internal:///(ssr)/./app/components/Header.jsx:20:76)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at ServerInsertedHTMLProvider (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:24328)
+Warning: Invalid DOM property `fill-rule`. Did you mean `fillRule`?
+    at path
+    at svg
+    at a
+    at div
+    at div
+    at div
+    at header
+    at Header (webpack-internal:///(ssr)/./app/components/Header.jsx:20:76)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at ServerInsertedHTMLProvider (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:24328)
+Warning: Invalid DOM property `clip-rule`. Did you mean `clipRule`?
+    at path
+    at svg
+    at a
+    at div
+    at div
+    at div
+    at header
+    at Header (webpack-internal:///(ssr)/./app/components/Header.jsx:20:76)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at ServerInsertedHTMLProvider (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:24328)
+Warning: Invalid DOM property `stroke-linejoin`. Did you mean `strokeLinejoin`?
+    at path
+    at svg
+    at a
+    at div
+    at div
+    at div
+    at header
+    at Header (webpack-internal:///(ssr)/./app/components/Header.jsx:20:76)
+    at Lazy
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at ServerInsertedHTMLProvider (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:24328)
+Warning: Invalid DOM property `fill-opacity`. Did you mean `fillOpacity`?
+    at rect
+    at svg
+    at a
+    at div
+    at div
+    at div
+    at div
+    at section
+    at body
+    at html
+    at RedirectErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:73:9)
+    at RedirectBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/redirect-boundary.js:81:11)
+    at ReactDevOverlay (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/ReactDevOverlay.js:87:9)
+    at HotReload (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:322:11)
+    at Router (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:202:11)
+    at ErrorBoundaryHandler (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:112:9)
+    at ErrorBoundary (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/error-boundary.js:158:11)
+    at AppRouter (webpack-internal:///(ssr)/./node_modules/next/dist/client/components/app-router.js:564:13)
+    at Lazy
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at r3 (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:18890)
+    at ServerInsertedHTMLProvider (C:\Users\user\kitchen\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:24328)
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., width: Null, height: 2700, favourite: ..., facades: ..., producer: ..., createdAt: {seconds: ..., nanoseconds: 597000000}, imageUrls: ..., price: ..., title: ..., description: ..., length: ..., blat: ...}
+                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., description: ..., length: ..., blat: ..., width: ..., height: ..., favourite: ..., facades: ..., producer: ..., createdAt: {seconds: ..., nanoseconds: 779000000}, imageUrls: ..., price: ..., title: ...}
+                                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., width: Null, height: 2420, favourite: ..., facades: ..., producer: ..., createdAt: {seconds: ..., nanoseconds: 269000000}, imageUrls: ..., price: ..., title: ..., description: ..., length: ..., blat: ...}
+                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., blat: ..., length: 3100, description: ..., facades: ..., producer: ..., height: ..., width: ..., title: ..., price: ..., createdAt: {seconds: ..., nanoseconds: 848000000}, imageUrls: ...}
+                                                                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., length: 4200, blat: ..., description: ..., title: ..., createdAt: {seconds: ..., nanoseconds: 932000000}, imageUrls: ..., price: ..., producer: ..., facades: ..., width: ..., height: ...}
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., length: 4200, blat: ..., description: ..., title: ..., imageUrls: ..., createdAt: {seconds: ..., nanoseconds: 777000000}, price: ..., producer: ..., facades: ..., width: ..., height: ...}
+                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., description: ..., blat: ..., length: ..., price: ..., createdAt: {seconds: ..., nanoseconds: 441000000}, imageUrls: ..., title: ..., height: ..., width: ..., producer: ..., facades: ...}
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., width: 3220, height: 2600, producer: ..., facades: ..., imageUrls: ..., createdAt: {seconds: ..., nanoseconds: 977000000}, price: ..., title: ..., description: ..., length: ..., blat: ...}
+                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., length: 4200, blat: "EGGER", description: ..., title: ..., createdAt: {seconds: ..., nanoseconds: 509000000}, imageUrls: ..., price: ..., facades: ..., producer: ..., width: ..., height: ...}
+                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., title: "GLASS", createdAt: {seconds: ..., nanoseconds: 265000000}, imageUrls: ..., price: ..., producer: ..., facades: ..., width: ..., height: ..., length: ..., blat: ..., description: ...}
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., title: "CLIO", price: 180000, imageUrls: ..., createdAt: {seconds: ..., nanoseconds: 820000000}, producer: ..., facades: ..., height: ..., width: ..., blat: ..., length: ..., description: ...}
+                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., createdAt: {seconds: ..., nanoseconds: 451000000}, imageUrls: ..., price: ..., title: ..., width: ..., height: ..., facades: ..., producer: ..., description: ..., length: ..., blat: ...}
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., title: ..., price: 149900, imageUrls: ..., createdAt: {seconds: ..., nanoseconds: 949000000}, producer: ..., facades: ..., height: ..., width: ..., blat: ..., length: ..., description: ...}
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Warning: Only plain objects can be passed to Client Components from Server Components. Objects with toJSON methods are not supported. Convert it manually to a simple value before passing it to props.
+  {id: ..., title: "THEA", price: Null, imageUrls: ..., createdAt: {seconds: ..., nanoseconds: 167000000}, producer: ..., facades: ..., height: ..., width: ..., blat: ..., length: ..., description: ...}
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ ⚠ The "images.domains" configuration is deprecated. Please use "images.remotePatterns" configuration instead.

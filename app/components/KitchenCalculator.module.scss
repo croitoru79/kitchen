@@ -28,6 +28,16 @@
     transition: background-color .2s ease, transform .2s ease;
 }
 
+.openCompact {
+    width: auto;
+    min-width: 0;
+    height: 36px;
+    padding: 0 14px;
+    gap: 8px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
 .openIcon {
     display: flex;
     align-items: center;
@@ -239,6 +249,12 @@
     background: $gold;
 }
 
+.next:disabled {
+    opacity: .45;
+    cursor: default;
+    background: #9a9a9a;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -439,6 +455,16 @@
     color: $black;
 }
 
+.required {
+    color: #c0392b;
+}
+
+.requiredLabel {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
 .fields input,
 .fields select,
 .fields textarea {
@@ -539,6 +565,14 @@
         width: 100%;
         max-width: 280px;
         justify-content: center;
+    }
+
+    .openCompact {
+        width: auto;
+        max-width: none;
+        height: 34px;
+        padding: 0 12px;
+        font-size: 10px;
     }
 
     .popup {
