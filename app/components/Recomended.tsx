@@ -30,6 +30,7 @@ export default function Recomended({ kitchens }: RecomendedProps) {
           alt={kitchen.title}
           width={1400}
           height={500}
+          unoptimized
         />
       </Link>
       <h3 className="recomended__item-name">{kitchen.title}</h3>

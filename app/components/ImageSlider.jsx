@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import Image from 'next/image';
+import placeholder from "@images/Img-15.jpg";
 
 const ImageSlider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,6 +36,7 @@ const ImageSlider = ({ images }) => {
       src={url || placeholder}
       width={1400}
       height={500}
+      unoptimized
     />
   </div>
   </PhotoView>

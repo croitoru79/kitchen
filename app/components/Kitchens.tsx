@@ -25,6 +25,7 @@ return <section className="kitchens">
                             alt={kitchen.title}
                             width={1400} 
                             height={500}
+                            unoptimized
                         />
                         <h3 className="kitchens__item-name">{kitchen.title}</h3>
                     </Link>
