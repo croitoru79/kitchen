@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { sumbitForm } from "../actions/server";
 import about from "@images/Rectangle 1294.png";
-import Image from "next/image";
 import { useRef } from "react";
 import { useRouter } from 'next/navigation'
 
@@ -66,14 +65,12 @@ function Form({
         >
           <div className="form-image">
             {withKitchen ? (
-              <Image
+              <img
                 alt={kitchenId as string}
                 src={kitchenImage as string}
-                width={500}
-                height={500}
               />
             ) : (
-              <Image alt={kitchenId as string} src={about} />
+              <img alt="" src={about.src} />
             )}
           </div>
           <div className="form-container">

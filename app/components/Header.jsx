@@ -34,7 +34,6 @@ export default function Header() {
 
         </div>
         <div className="header__inner-info">
-          <KitchenCalculator buttonClassName="header__calc" compact label="CALCULATOR" />
           <Link className="header__inner-link" href="tel:37361039797">
             +373 61 03 97 97
           </Link>
@@ -74,15 +73,18 @@ export default function Header() {
       </div>
       <div className={`menu ${show && "visible"}`}>
         <div className="menu-links">
-          <a className="menu-link" href="">
+          <Link className="menu-link" href="/" onClick={() => setShow(false)}>
             Acasă
-          </a>
-          <a className="menu-link" href="">
+          </Link>
+          <Link className="menu-link" href="/bucatarii" onClick={() => setShow(false)}>
             Bucătării
-          </a>
-          <a className="menu-link" href="">
+          </Link>
+          <Link className="menu-link" href="/franke" onClick={() => setShow(false)}>
+            Franke
+          </Link>
+          <Link className="menu-link" href="/showrooms" onClick={() => setShow(false)}>
             Showroom-uri
-          </a>
+          </Link>
         </div>
         <div className="header__inner-info visible">
           <Link className="header__inner-link" href="tel: +37361039797">

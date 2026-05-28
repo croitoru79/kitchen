@@ -11,11 +11,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bucătării Croitoru | Showroom-uri",
     description: "Bucătării Croitoru - Bucătării la comandă cu design italian",
+    url: "https://croitoru.md/showrooms",
+    siteName: "Bucătării Croitoru",
+    locale: "ro_MD",
+    type: "website",
     images: [
       {
-        url: "/images/og-image.png",
-        width: 800,
-        height: 600,
+        url: "https://croitoru.md/images/og-image.png",
+        width: 1200,
+        height: 630,
         alt: "Bucătării Croitoru",
       },
     ],

@@ -165,6 +165,7 @@ export default function KitchenCalculator({
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState(1);
   const [form, setForm] = useState<CalculatorState>(initialState);
+  const [phoneTouched, setPhoneTouched] = useState(false);
   const router = useRouter();
   const sidebarChoice =
     step === 1
@@ -191,6 +192,7 @@ export default function KitchenCalculator({
     (step === 1 && selectedShapeContain) ||
     (step === 3 && selectedCountertopContain) ||
     (step === 4 && selectedCountertopContain);
+  const isMoldovaPhone = /^0(60|67|68|69|76|78|79)\d{6}$/.test(form.phone);
   const isPhoneEmpty = !form.phone.trim();
 
   useEffect(() => {
@@ -237,6 +239,7 @@ export default function KitchenCalculator({
   };
 
   const updatePhone = (value: string) => {
+    setPhoneTouched(true);
     updateField("phone", value.replace(/\D/g, "").slice(0, 9));
   };
 
@@ -262,7 +265,8 @@ export default function KitchenCalculator({
   };
 
   const finish = async () => {
-    if (!form.phone.trim()) {
+    setPhoneTouched(true);
+    if (!isMoldovaPhone) {
       pushCalculatorEvent("calculator_finish_validation_error");
       return;
     }
@@ -482,7 +486,7 @@ export default function KitchenCalculator({
                     </svg>
                   </button>
                 ) : (
-                  <button className={styles.next} type="button" onClick={finish} disabled={isPhoneEmpty}>
+                  <button className={styles.next} type="button" onClick={finish} disabled={!isMoldovaPhone}>
                     Finisează
                   </button>
                 )}
