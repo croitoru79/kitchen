@@ -471,6 +471,41 @@
     color: #c0392b;
 }
 
+.phoneInput {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 12px;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: border-color .2s ease, background-color .2s ease;
+}
+
+.phoneInput:focus-within {
+    border-color: rgba($gold, 80%);
+    background-color: $white;
+}
+
+.phoneInputError {
+    border-color: #c0392b;
+    background-color: #fff8f8;
+}
+
+.phoneInput :global(.PhoneInputCountry) {
+    margin-right: 10px;
+}
+
+.phoneInput :global(.PhoneInputInput) {
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: $black;
+    @include Montserrat-Regular;
+    font-size: 15px;
+    outline: none;
+}
+
 .requiredLabel {
     display: inline-flex;
     align-items: center;

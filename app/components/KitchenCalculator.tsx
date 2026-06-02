@@ -4,6 +4,7 @@ import Image, { type StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import PhoneInput, { isValidPhoneNumber, type Value } from "react-phone-number-input";
 import logo from "@images/Croitoru_Logo.svg";
 import sidebarImage from "@images/calculator/sidebar.png";
 import step1TipDrept from "@images/calculator/step1-tip-drept.png";
@@ -192,8 +193,7 @@ export default function KitchenCalculator({
     (step === 1 && selectedShapeContain) ||
     (step === 3 && selectedCountertopContain) ||
     (step === 4 && selectedCountertopContain);
-  const isMoldovaPhone = /^0(60|67|68|69|76|78|79)\d{6}$/.test(form.phone);
-  const isPhoneEmpty = !form.phone.trim();
+  const isPhoneValid = form.phone ? isValidPhoneNumber(form.phone) : false;
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -238,9 +238,9 @@ export default function KitchenCalculator({
     }));
   };
 
-  const updatePhone = (value: string) => {
+  const updatePhone = (value?: Value) => {
     setPhoneTouched(true);
-    updateField("phone", value.replace(/\D/g, "").slice(0, 9));
+    updateField("phone", value ?? "");
   };
 
   const selectOption = (field: "shape" | "material" | "countertop", value: string) => {
@@ -266,7 +266,7 @@ export default function KitchenCalculator({
 
   const finish = async () => {
     setPhoneTouched(true);
-    if (!isMoldovaPhone) {
+    if (!isPhoneValid) {
       pushCalculatorEvent("calculator_finish_validation_error");
       return;
     }
@@ -446,14 +446,20 @@ export default function KitchenCalculator({
                       <span className={styles.requiredLabel}>
                         Număr de telefon <span className={styles.required}>*</span>
                       </span>
-                      <input
+                      <PhoneInput
+                        className={`${styles.phoneInput} ${phoneTouched && form.phone && !isPhoneValid ? styles.phoneInputError : ""}`}
+                        defaultCountry="MD"
+                        international
+                        countryCallingCodeEditable={false}
                         required
-                        type="tel"
-                        value={form.phone}
-                        onChange={(event) => updatePhone(event.target.value)}
+                        value={form.phone as Value}
+                        onChange={updatePhone}
+                        onBlur={() => setPhoneTouched(true)}
                         placeholder="ex. 060896509"
-                        maxLength={9}
                       />
+                      {phoneTouched && form.phone && !isPhoneValid && (
+                        <span className={styles.phoneError}>Introduceți un număr de telefon valid</span>
+                      )}
                     </label>
                     <label className={styles.fieldsDetails}>
                       Detalii suplimentare
@@ -486,7 +492,7 @@ export default function KitchenCalculator({
                     </svg>
                   </button>
                 ) : (
-                  <button className={styles.next} type="button" onClick={finish} disabled={!isMoldovaPhone}>
+                  <button className={styles.next} type="button" onClick={finish} disabled={!isPhoneValid}>
                     Finisează
                   </button>
                 )}
